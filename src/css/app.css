@@ -1,0 +1,71 @@
+/*Header-Bar*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: dosis;
+}
+
+body {
+  background-color: rgb(245, 139, 139);
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+}
+
+.wrapper-Banner {
+  max-width: 1200px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px 0 0;
+}
+
+.sub-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.image-container {
+  width: 40%;
+  padding: auto;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.form-container {
+  width: 60%;
+  background-color: rgba(218, 202, 209, 0.425);
+}
+
+.button-container {
+  text-align: center;
+  margin: 15% 20% 15% 20%;
+}
+
+button {
+  background-color: #00ba38;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px;
+  height: 50px;
+}
+
+button:hover {
+  transform: scale(110%);
+}

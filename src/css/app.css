@@ -10,29 +10,23 @@ body {
   background-color: rgb(245, 139, 139);
 }
 
-.main-wrapper {
+.container {
   max-width: 1200px;
-  margin: auto;
-  padding: 50px;
+  margin: 0 auto;
 }
 
-.wrapper-Banner {
-  max-width: 1200px;
-  height: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px 20px 0 0;
-}
-
-.sub-wrapper {
+.banner-wrapper {
   display: flex;
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
+  margin-top: 10px;
   padding: 10px;
+  border-radius: 15px;
 }
 
 .image-container {
   width: 40%;
-  padding: auto;
   margin: auto;
 }
 
@@ -68,4 +62,63 @@ button {
 
 button:hover {
   transform: scale(110%);
+}
+
+/*----------For Computers -----------*/
+@media (max-width: 1400px) {
+}
+
+/*-----------For Tablets--------------*/
+@media (max-width: 1200px) {
+  .banner-wrapper {
+    display: block;
+    background-color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    border-radius: 0px;
+  }
+
+  .image-container {
+    padding: 0px;
+  }
+
+  .form-container {
+    width: auto;
+    background-color: rgba(218, 202, 209, 0.425);
+    margin-top: 5px;
+  }
+
+  .button-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+/*--------------For Phones--------------*/
+@media (max-width: 480px) {
+  .image-container {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+  }
+
+  .image-container img {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .button-container {
+    margin: 0px;
+  }
+
+  button {
+    display: grid;
+    border-radius: 0px;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  button:hover {
+    transform: none;
+  }
 }

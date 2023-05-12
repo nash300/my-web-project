@@ -1,23 +1,30 @@
 import React from "react";
-import {} from "react-router-dom";
-import "../css/main.css";
+import { Link } from "react-router-dom";
 
-function Main() {
+//CSS
+import "../css/style.css";
+import "../css/home.css";
+
+// Components
+import HeaderBar from "./../components/HeaderBar";
+
+function Home() {
   return (
     <>
-      <div className="container">
+      <div className="main-wrapper">
+        <HeaderBar />
         <div className="banner-wrapper">
           <div className="image-container">
             <img src="images/logo.jpg" alt="logo picture" />
           </div>
           <div className="form-container">
             <div className="button-container">
-              <a href="./Student">
+              <Link to="./Student">
                 <button>I am a student. Looking for a teacher</button>
-              </a>
-              <a href="/Teacher">
+              </Link>
+              <Link to="./Teacher">
                 <button> I am a Teacher. Looking for a student</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -26,4 +33,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;

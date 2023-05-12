@@ -1,28 +1,8 @@
-/*Header-Bar*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: dosis;
-}
-
-body {
-  background-color: rgb(245, 139, 139);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .banner-wrapper {
   display: flex;
-  background-color: whitesmoke;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
   margin-top: 10px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .image-container {
@@ -64,12 +44,23 @@ button:hover {
   transform: scale(110%);
 }
 
+/* //////////////////  Media queries  //////////////////*/
+
 /*----------For Computers -----------*/
 @media (max-width: 1400px) {
+  .container {
+    margin-top: auto;
+    margin-left: auto;
+  }
 }
 
 /*-----------For Tablets--------------*/
 @media (max-width: 1200px) {
+  .main-wrapper {
+    margin: 10px;
+    padding: 10px;
+  }
+
   .banner-wrapper {
     display: block;
     background-color: whitesmoke;
@@ -96,8 +87,19 @@ button:hover {
 
 /*--------------For Phones--------------*/
 @media (max-width: 480px) {
+  /*Components*/
+  .HeaderBar {
+    display: none;
+  }
+
+  .main-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*General*/
   .image-container {
-    width: 100%;
+    width: 75%;
     margin: auto;
     padding: 0px;
   }
@@ -112,7 +114,6 @@ button:hover {
   }
 
   button {
-    display: grid;
     border-radius: 0px;
     width: 100%;
     margin: 10px auto;

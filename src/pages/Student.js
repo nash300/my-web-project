@@ -1,14 +1,17 @@
 import React from "react";
-import "./student.css";
-import HeaderBar from "../components/HeaderBar";
-import "../components/data";
+
+//CSS
+import "../css/style.css";
+
+// Components
+import HeaderBar from "./../components/HeaderBar";
 
 function Student() {
   return (
     <>
       <div className="main-wrapper">
-        <div className="wrapper-Banner">
-          <HeaderBar />
+        <HeaderBar />
+        <div className="banner-wrapper">
           <div className="sub-wrapper">
             <div className="image-container">
               <img src="images/logo.jpg" alt="logo picture" />

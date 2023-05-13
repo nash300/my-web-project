@@ -1,4 +1,20 @@
-/* Genaral settings*/
+/* 
+==========================================================================================
+* This CSS file includes the general stylings for the entire site. 
+* Only the Home.js has its own CSS file (called "home.css") which overrides some settings.
+* The order of the elements which appear here, corresponds to the order in the source files 
+
+* This file defines the settings for the elements in the following sections:
+  
+  * 1. UNIVERSAL STYLING
+  * 2. STYLES FOR COMPONENTS
+  * 3. SETTINGS FOR THE PAGES
+  * 4. MEDIA QUERIES
+
+==========================================================================================
+*/
+
+/* =========== 1. UNIVERSAL STYLING ============*/
 * {
   margin: 0;
   padding: 0;
@@ -31,16 +47,27 @@ input {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.61);
 }
 
-/* ----  HeaderBar Component (Start)  -----*/
+/* ============== 2. STYLES FOR COMPONENTS =================*/
+/* === HeaderBar === */
 .HeaderBar {
+  display: flex;
   height: 50px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 10px;
-  display: flex;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: right;
+}
+
+.titleDiv {
+  width: 90%;
+  margin-left: 10px;
+  padding-top: 15px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.buttonDiv {
+  margin-right: 10px;
 }
 
 .HeaderBar button {
@@ -52,9 +79,8 @@ input {
 input:hover {
   transform: scale(110%);
 }
-/* ----  HeaderBar Component (End)  -----*/
 
-/* Page Settings*/
+/* ============ 3. SETTINGS FOR THE PAGES  =============*/
 .main-wrapper {
   max-width: 1200px;
   margin: auto;
@@ -105,7 +131,6 @@ form {
   resize: none;
 }
 
-/*Display Area*/
 .display {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 5px 5px;
@@ -114,21 +139,20 @@ form {
   grid-template-columns: 40% 60%;
 }
 
+/* ============= 4. MEDIA QUERIES ================*/
 /*  TO DO  (change responsiveness for student and teacher) */
 /* TO DO */
 /* TO DO */
-/* TO DO */
-/* TO DO */
-/* TO DO */
-/* TO DO */
-/*----------For Computers -----------*/
+
+/* === For Computers ===*/
+/* Not necessary!*/
 @media (max-width: 1400px) {
 }
 
-/*-----------For Tablets--------------*/
+/* ===For Tablets ===*/
 @media (max-width: 1200px) {
   .banner-wrapper {
-    display: block;
+    display: flex;
     background-color: whitesmoke;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -136,11 +160,12 @@ form {
   }
 
   .image-container {
+    width: 40%;
     padding: 0px;
   }
 
   .form-container {
-    width: auto;
+    width: 60%;
     background-color: rgba(218, 202, 209, 0.425);
     margin-top: 5px;
   }
@@ -151,7 +176,7 @@ form {
   }
 }
 
-/*--------------For Phones--------------*/
+/* === For Mobile Phones  ===*/
 @media (max-width: 480px) {
   .image-container {
     width: 100%;

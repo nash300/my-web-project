@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <div className="main-wrapper">
-        <HeaderBar />
+        <HeaderBar location={"Home"} />
         <div className="banner-wrapper">
           <div className="image-container">
             <img src="images/logo.jpg" alt="logo picture" />

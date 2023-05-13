@@ -1,3 +1,16 @@
+/* 
+==========================================================================================
+* This CSS file includes the stylings only for the home.js file. 
+* style.css includes the common settings for the other .js files
+* The order of the elements which appear here, corresponds to the order in the source files 
+
+*  This file contains 3 main sections
+     1. STYLING
+     2. MEDIA QUEIRIES 
+==========================================================================================
+*/
+
+/* =============== 1. STYLING  =================*/
 .banner-wrapper {
   display: flex;
   margin-top: 10px;
@@ -44,9 +57,9 @@ button:hover {
   transform: scale(110%);
 }
 
-/* //////////////////  Media queries  //////////////////*/
+/* ==================  2. MEDIA QUEIRIES  ====================*/
 
-/*----------For Computers -----------*/
+/* ========  For Computers =========*/
 @media (max-width: 1400px) {
   .container {
     margin-top: auto;
@@ -54,7 +67,7 @@ button:hover {
   }
 }
 
-/*-----------For Tablets--------------*/
+/* ======  For Tablets ======*/
 @media (max-width: 1200px) {
   .main-wrapper {
     margin: 10px;
@@ -85,19 +98,19 @@ button:hover {
   }
 }
 
-/*--------------For Phones--------------*/
+/* =====  For Phones ======*/
 @media (max-width: 480px) {
   /*Components*/
   .HeaderBar {
     display: none;
   }
 
+  /*General*/
   .main-wrapper {
     margin: 0;
     padding: 0;
   }
 
-  /*General*/
   .image-container {
     width: 75%;
     margin: auto;

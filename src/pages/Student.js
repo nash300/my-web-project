@@ -5,7 +5,7 @@ import "../css/style.css";
 
 // Components
 import HeaderBar from "../components/HeaderBar";
-import Display from "../components/Display";
+import Classified from "../components/Classified";
 
 function Student() {
   return (
@@ -40,7 +40,8 @@ function Student() {
           </div>
         </div>
         <div className="display">
-          <Display/>
+          <Classified /> <Classified /> <Classified /> <Classified />{" "}
+          <Classified />
         </div>
       </div>
       ;

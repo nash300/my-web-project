@@ -81,6 +81,15 @@ input:hover {
   transform: scale(110%);
 }
 
+/* === Display === */
+.display {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 5px 5px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
 /* ============ 3. SETTINGS FOR THE PAGES  =============*/
 .main-wrapper {
   max-width: 1200px;
@@ -132,13 +141,7 @@ form {
   resize: none;
 }
 
-.display {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 0 0 5px 5px;
-  background-color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 40% 60%;
-}
+
 
 /* ============= 4. MEDIA QUERIES ================*/
 /*  TO DO  (change responsiveness for student and teacher) */

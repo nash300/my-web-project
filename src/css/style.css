@@ -8,13 +8,16 @@
   
   * 1. UNIVERSAL STYLING
   * 2. STYLES FOR COMPONENTS
-  * 3. SETTINGS FOR THE PAGES
+  * 3. SETTINGS FOR THE "Student.js" and "Teacher.js" PAGES
   * 4. MEDIA QUERIES
 
 ==========================================================================================
 */
 
-/* =========== 1. UNIVERSAL STYLING ============*/
+/*================================================================*/
+/* =================== 1. UNIVERSAL STYLING ======================*/
+/*================================================================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -30,25 +33,29 @@ body {
   background-color: rgb(245, 139, 139);
 }
 
-button,
-input {
-  background-color: #00ba38;
+.btn {
+  background-color: #16b308;
   color: white;
-  padding: 10px 25px;
+  padding: 5px 25px;
   border: none;
-  border-radius: 100px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 5px;
+  border-radius: 20px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
   margin: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.61);
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover {
+  transform: scale(110%);
+}
+
+/*==========================================================*/
 /* ============== 2. STYLES FOR COMPONENTS =================*/
-/* === HeaderBar === */
+/*==========================================================*/
+
+/* =============== HeaderBar Component ==============*/
 .HeaderBar {
   display: flex;
   height: 50px;
@@ -56,42 +63,36 @@ input {
   border-radius: 5px;
   margin-bottom: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
 .titleDiv {
   width: 90%;
-  margin-left: 10px;
-  padding-top: 15px;
+  padding-left: 1%;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.buttonDiv {
-  margin-right: 10px;
-  margin-top: 3px;
-}
-
-.HeaderBar button {
-  height: auto;
-  margin-right: 10px;
-}
-
-.HeaderBar button:hover,
+.HeaderBar .btn:hover,
 input:hover {
   transform: scale(110%);
 }
 
-/* === Classified === */
-.classified {
+/* ================== Classified Component================*/
+.Classified {
+  display: flex;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  display: grid;
   grid-template-columns: 20% 60% 20%;
   margin: 5px auto 5px auto;
 }
 
-/* ============ 3. SETTINGS FOR THE PAGES  =============*/
+/*========================================================================*/
+/* ===================== 3. SETTINGS FOR THE PAGES  ======================*/
+/*========================================================================*/
+
 .main-wrapper {
   max-width: 1200px;
   margin: auto;
@@ -133,6 +134,12 @@ form {
   align-items: center;
 }
 
+.drop-down-menu {
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+}
+
 #text-area {
   overflow: auto;
   width: 90%;
@@ -142,18 +149,24 @@ form {
   resize: none;
 }
 
-/* ============= 4. MEDIA QUERIES ================*/
-/*  TO DO  (change responsiveness for student and teacher) */
-/* TO DO */
-/* TO DO */
-
-/* === For Computers ===*/
-/* Not necessary!*/
-@media (max-width: 1400px) {
+.form-btn {
+  margin-top: 50px;
 }
 
-/* ===For Tablets ===*/
+/*===================================================================*/
+/* ======================= 4. MEDIA QUERIES =========================*/
+/*===================================================================*/
+
+/* =================For Tablets ==============*/
+
 @media (max-width: 1200px) {
+  /*Components*/
+
+  .classfird-btn {
+    width: auto;
+    height: 30px;
+  }
+
   .banner-wrapper {
     display: flex;
     background-color: whitesmoke;
@@ -177,9 +190,14 @@ form {
     margin-top: 0px;
     margin-bottom: 0px;
   }
+
+  .form-btn {
+    margin-top: 10px;
+  }
 }
 
-/* === For Mobile Phones  ===*/
+/* ==============For Mobile Phones  ==============*/
+
 @media (max-width: 480px) {
   .image-container {
     width: 100%;
@@ -192,22 +210,11 @@ form {
     padding: 0px;
   }
 
-  .titleDiv {
-    margin-left: 10px;
-    padding-top: 10px;
-  }
-
   .buttonDiv {
     margin: 0px;
   }
 
-  button {
-    display: grid;
-    border-radius: 0px;
-    margin: 10px auto;
-  }
-
-  button:hover {
+  .btn:hover {
     transform: none;
   }
 }

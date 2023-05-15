@@ -3,11 +3,13 @@ import React from "react";
 //CSS
 import "../css/style.css";
 
-// Components
+//Components
 import HeaderBar from "../components/HeaderBar";
 import Classified from "../components/Classified";
 
 function Student() {
+  /* TO DO*/
+
   return (
     <>
       <div className="main-wrapper">
@@ -19,7 +21,7 @@ function Student() {
           <div className="form-container">
             <form>
               <span>choose a category:</span>
-              <select>
+              <select className="drop-down-menu">
                 <option value="All">All</option>
                 <option value="Business studies">Business studies</option>
                 <option value="Computer Science">Computer Science</option>
@@ -27,20 +29,19 @@ function Student() {
                 <option value="Physics">Physics</option>
                 <option value="Science">Science</option>
               </select>
-              <br />
-              <br />
               <span>Write a description:</span>
               <textarea type="text" id="text-area"></textarea>
-              <br />
-              <br />
-              <br />
-
-              <input type="submit" value="Submit your announcement"></input>
+              <input
+                className="btn form-btn"
+                type="submit"
+                value="Submit your announcement"
+              ></input>
             </form>
           </div>
         </div>
         <div className="display">
-          <Classified /> <Classified /> <Classified /> <Classified />{" "}
+          {/* The data is fetched from "Super Base" in to this div */}
+          <Classified /> <Classified /> <Classified /> <Classified />
           <Classified />
         </div>
       </div>

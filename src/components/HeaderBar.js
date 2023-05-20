@@ -5,31 +5,35 @@ import "../css/style.css";
 
 /*This is the HeaderBar component*/
 
-function HeaderBar({ location }) {
+function HeaderBar({ title }) {
+  /*=====================================================*/
+  /* Makes the home button only unvisible in the main page */
+  /*=====================================================*/
   useEffect(() => {
-    /*  Hiding the "Home button" in the "Home" page*/
     const btn = document.getElementById("home-btn");
 
-    if (location === "Home") {
-      {
-        btn.style.display = "none";
-      }
+    if (title === "Home") {
+      btn.style.display = "none";
     }
-  }, [location]);
+  }, [title]);
+
+  /*=====================================================================================*/
+  /* Sets the HeaderBar title according to the corresponding page (eg: Student / Teacher)*/
+  /*=====================================================================================*/
 
   return (
-    <>
-      <div className="HeaderBar">
-        <div className="titleDiv">{location}</div>
-        <div className="buttonDiv">
-          <Link to="/">
-            <button className="btn header-bar-btn" id="home-btn">
-              Home
-            </button>
-          </Link>
-        </div>
+    <div className="HeaderBar">
+      <div className="titleDiv" id="header-bar-title-div">
+        {title}
       </div>
-    </>
+      <div className="buttonDiv">
+        <Link to="/">
+          <button className="btn header-bar-btn" id="home-btn">
+            Home
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 }
 export default HeaderBar;

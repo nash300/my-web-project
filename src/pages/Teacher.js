@@ -20,7 +20,7 @@ function Teacher() {
           </div>
           <div className="form-container">
             <form>
-              <span>choose a category:</span>
+              <span className="form-sub-hedding">choose a category:</span>
               <select className="drop-down-menu">
                 <option value="All">All</option>
                 <option value="Business studies">Business studies</option>
@@ -29,8 +29,12 @@ function Teacher() {
                 <option value="Physics">Physics</option>
                 <option value="Science">Science</option>
               </select>
-              <span>Write a description:</span>
+              <span className="form-sub-hedding">Write a description:</span>
               <textarea type="text" id="text-area"></textarea>
+
+             <label for="email-input" className="form-sub-hedding">Enter your email:</label>
+              <input type="email" id="email-input"></input>
+
               <input
                 className="btn form-btn"
                 type="submit"
